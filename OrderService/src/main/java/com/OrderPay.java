@@ -101,14 +101,15 @@ public class OrderPay {
 					preparedStmt.setInt(5, Integer.parseInt(cardNo));
 					preparedStmt.setInt(6, Integer.parseInt(SSN));
 					preparedStmt.setString(7, cardExpDate);
-					preparedStmt.setString(8, amount);
+					preparedStmt.setDouble(8, Double.parseDouble(amount));
 					// execute the statement
 
 					preparedStmt.execute();
 					con.close();
-					output = "Inserted successfully";
+					String newOrderPay = readOrderPay();
+					output = "{\"status\":\"success\", \"data\": \"" + newOrderPay + "\"}";
 				} catch (Exception e) {
-					output = "Error while inserting the order payment.";
+					output = "{\"status\":\"error\", \"data\":\"Error while inserting the Order.\"}";
 					System.err.println(e.getMessage());
 				}
 				return output;

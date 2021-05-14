@@ -31,7 +31,7 @@ $(document).on("click", "#btnSave", function(event) {
 
 	$.ajax(
 		{
-			url: "OrderPaysAPI",
+			url: "OrderPayAPI",
 			type: type,
 			data: $("#formOrderPay").serialize(),
 			dataType: "text",
@@ -47,7 +47,7 @@ function onOrderPaySaveComplete(response, status) {
 		if (resultSet.status.trim() == "success") {
 			$("#alertSuccess").text("Successfully saved.");
 			$("#alertSuccess").show();
-			$("#divOrderPaysGrid").html(resultSet.data);
+			$("#divOrderPayGrid").html(resultSet.data);
 		} else if (resultSet.status.trim() == "error") {
 			$("#alertError").text(resultSet.data);
 			$("#alertError").show();

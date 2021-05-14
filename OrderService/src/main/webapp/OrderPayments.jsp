@@ -16,7 +16,7 @@
 			<div class="col-6">
 				<h1>Order Payment Details</h1>
 				<form id="formOrderPay" name="formOrderPay" method="post"
-					action="OrderPays.jsp">
+					action="OrderPayments.jsp">
 					Order ID: <input id="OrderPayID" name="OrderPayID"
 						type="text" class="form-control form-control-sm"> <br>
 					Payment Method: <input id="payMethod" name="payMethod" type="text"
@@ -41,7 +41,7 @@
 				<div id="alertSuccess" class="alert alert-success"></div>
 				<div id="alertError" class="alert alert-danger"></div>
 				<br>
-				<div id="divOrderPaysPayGrid">
+				<div id="divOrderPayGrid">
 					<%
 					OrderPay OrderPayObj = new OrderPay();
 					out.print(OrderPayObj.readOrderPay());
