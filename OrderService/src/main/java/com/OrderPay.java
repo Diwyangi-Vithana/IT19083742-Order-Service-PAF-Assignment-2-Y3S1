@@ -20,7 +20,7 @@ public class OrderPay {
 			}
 			return con;
 		}
-		// read order payements
+	/////////////////////Readpayements
 		public String readOrderPay() {
 			String output = "";
 			try {
