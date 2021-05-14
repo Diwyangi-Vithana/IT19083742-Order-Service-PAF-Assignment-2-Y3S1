@@ -65,11 +65,12 @@ function onOrderSaveComplete(response, status) {
 
 // UPDATE==========================================
 $(document).on("click", ".btnUpdate", function(event) {
-	$("#hidOrderIDSave").val($(this).data("Orderid"));
-	$("#OrderCode").val($(this).closest("tr").find('td:eq(0)').text());
-	$("#OrderName").val($(this).closest("tr").find('td:eq(1)').text());
-	$("#OrderPrice").val($(this).closest("tr").find('td:eq(2)').text());
-	$("#OrderDesc").val($(this).closest("tr").find('td:eq(3)').text());
+	$("#hidOrderIDSave").val($(this).data("orderid"));
+	$("#productName").val($(this).closest("tr").find('td:eq(1)').text());
+	$("#quantity").val($(this).closest("tr").find('td:eq(2)').text());
+	$("#price").val($(this).closest("tr").find('td:eq(3)').text());
+	$("#prodDesc").val($(this).closest("tr").find('td:eq(4)').text());
+	$("#orderDate").val($(this).closest("tr").find('td:eq(5)').text());
 });
 
 
