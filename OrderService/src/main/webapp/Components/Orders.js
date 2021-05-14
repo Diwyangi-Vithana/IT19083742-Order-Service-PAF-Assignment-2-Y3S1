@@ -80,7 +80,7 @@ $(document).on("click", ".btnRemove", function(event) {
 		{
 			url: "OrdersAPI",
 			type: "DELETE",
-			data: "OrderID=" + $(this).data("orderID"),
+			data: "orderID=" + $(this).data("orderid"),
 			dataType: "text",
 			complete: function(response, status) {
 				onOrderDeleteComplete(response.responseText, status);

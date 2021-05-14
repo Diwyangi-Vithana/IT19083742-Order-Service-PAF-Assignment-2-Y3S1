@@ -55,9 +55,9 @@ public class Order {
 				// buttons
 				output += "<td><input name='btnUpdate' type='button' value='Update'class='btnUpdate btn btn-secondary'></td>"
 						+ "<td>"
-						+ "<input name='btnRemove' type='button' value='Remove'class='btnRemove btn btn-danger'data-Orderid = '"
+						+ "<input name='btnRemove' type='button' value='Remove'class='btnRemove btn btn-danger' data-orderid = '"
 						+ orderID + "'></td>"
-						+ "<td><input name='btnBuy' type='submit' value='Buy'class='btn btn-danger' data-Orderid = '"
+						+ "<td><input name='btnBuy' type='button' value='Buy'class='btn btn-danger' data-Orderid = '"
 						+ orderID + "'>" + "</td></tr>";
 			}
 			con.close();
